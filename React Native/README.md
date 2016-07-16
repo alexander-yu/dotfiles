@@ -23,17 +23,25 @@ Prerequisites
 + Android Studio
 + GenyMotion + VirtualBox
 + NOTE: Make sure to install the right Build Tools via SDK Manager for the API you're developing for
-+ NOTE: If build leads to a timeout exception getting device list, in Genymotion ADB settings, change SDK to custom SDK tools (point to the SDK installed by Android Studio)
 
 Installation
 ------------
 
-```
-npm install -g react-native-cli
-```
+Simply run `npm install -g react-native-cli`.
 
 Running An App
 --------------
 
 ### Android
-+ local.properties
+1. First create a `local.properties` file in the `android` directory of the app that contains the line `sdk.dir=[path to Android sdk]` (remember to escape the colon/slashes)
+2. Start up an Android emulator on Genymotion
+3. Navigate to the app directory and run `react-native run-android`
+    + If build attempt leads to a timeout exception in getting device list, go to Genymotion ADB settings and change SDK to custom SDK tools (browse to the Android Studio SDK)
+    + If the packager does not start automatically, run `react-native start`
+    + If you run into the error `ERROR Watcher took too long to load`, navigate to the file 
+    `node_modules/react-native/packager/react-packager/src/DependencyResolver/FileWatcher/index.js`
+    and increase `MAX_WAIT_TIME`
+
+### iOS
+1. Start up an iOS emulator on Xcode
+2. Navigate to the app directory and run `react-native run-ios`
