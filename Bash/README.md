@@ -7,7 +7,7 @@ because the prompts are pretty, but also because I appreciate the information pr
 
 - [Powerline](https://github.com/powerline/powerline)
 	- NOTE: This is actually a vim plugin (which is also super helpful),
-	but to install for shell prompts, look [here](http://powerline.readthedocs.io/en/master/usage/shell-prompts.html).
+	but to install for shell prompts, look [here](http://powerline.readthedocs.io/en/master/usage/shell-prompts.html)
 
 - [Powerline Shell](https://github.com/banga/powerline-shell)
 	- This is a lighter weight version of the actual Powerline prompt, and doesn't
