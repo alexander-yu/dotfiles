@@ -1,8 +1,7 @@
-Sublime Text 3
-==============
+# Sublime Text 3
 
-Packages
---------
+## Packages
+
 - [Package Control](https://packagecontrol.io/installation#st3)
     - A must-have Sublime Text package manager
 
@@ -36,9 +35,10 @@ Packages
 
 - [SideBarEnhancements](https://github.com/titoBouzout/SideBarEnhancements)
 
-Settings
---------
-#### General Settings
+## Settings
+
+### General Settings
+
 ```
 "always_show_minimap_viewport"  : true,
 "bold_folder_labels"            : true,
@@ -51,12 +51,14 @@ Settings
 "translate_tabs_to_spaces"      : true
 ```
 
-#### Anaconda Settings
+### Anaconda Settings
+
 ```
 "anaconda_linting": false   // Disable Anaconda linting in lieu of SublimeLinter
 ```
 
 ### SublimeLinter Settings
+
 ```
 "mark_style": squiggly_lines    // Copy default settings and add this one; changes the error style
 ```

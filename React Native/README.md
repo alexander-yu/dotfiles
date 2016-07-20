@@ -1,10 +1,7 @@
-React Native Setup
-==================
+# React Native Setup
 
-This provides the necessary instructions for setting up React Native the way it's currently set up on my computer (additional instructions for Windows computers, which mine at the time of writing is).
+## Prerequisites
 
-Prerequisites
--------------
 + Package manager (not necessary, but highly recommended)
     + Windows: [Chocolatey](https://chocolatey.org/)
     + Mac: [Homebrew](http://brew.sh/)
@@ -24,13 +21,11 @@ Prerequisites
 + GenyMotion + VirtualBox
 + NOTE: Make sure to install the right Build Tools via SDK Manager for the API you're developing for
 
-Installation
-------------
+## Installation
 
 Simply run `npm install -g react-native-cli`.
 
-Running An App
---------------
+## Running An App
 
 ### Android
 1. First create a `local.properties` file in the `android` directory of the app that contains the line `sdk.dir=[path to Android sdk]` (remember to escape the colon/slashes)

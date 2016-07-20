@@ -1,5 +1,5 @@
-Bash
-====
+# Bash
+
 There are several choices of bash profiles that have appealed to me so far; partly
 because the prompts are pretty, but also because I appreciate the information provided.
 

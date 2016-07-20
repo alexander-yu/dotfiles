@@ -1,8 +1,6 @@
-IntelliJ IDEA
-=============
+# IntelliJ IDEA Setup
 
-General Appearance
-------------------
+## General Appearance
 - [Material Theme](https://github.com/ChrisRM/material-theme-jetbrains)
 	- Available by going to **Settings/Preferences/Plugins** in IDEA, selecting **Browse repositories...**, and searching for `Material Theme UI`
 	- Switch theme color via **Tools -> Material Theme**
@@ -20,8 +18,8 @@ General Appearance
 	- Full: `005EC7` (background only)
 	- Uncovered: `AB4F2A` (background only)
 
-Plugins
--------
+## Plugins
+
 - Eclipse Code Formatter
     - Set **Eclipse Java Formatter config file** to the provided `formatter.xml`
     - Set **Import order** to the provided `eclipse.importorder`
@@ -29,8 +27,8 @@ Plugins
 - String Manipulation
 - Material Theme UI (see **General Appearance**)
 
-Code Style/Inspection Settings
--------------------------------
+## Code Style/Inspection Settings
+
 - **Editor/Code Style/Java**
     - **Imports**
         - Use single class import
