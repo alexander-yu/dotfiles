@@ -1,10 +1,6 @@
 Sublime Text 3
 ==============
 
-Command Line
-------------
-
-
 Packages
 --------
 - [Package Control](https://packagecontrol.io/installation#st3)
@@ -34,7 +30,33 @@ Packages
     - Framework for interactive code linting
     - [Officially supported linters](https://github.com/SublimeLinter?page=1)
         - Linters are available on Package Control
+        - Examples: pep8 and pyflakes (both are recommended for Python development)
 
 - [Base16 Theme](https://github.com/chriskempson/base16-textmate)
 
 - [SideBarEnhancements](https://github.com/titoBouzout/SideBarEnhancements)
+
+Settings
+--------
+#### General Settings
+```
+"always_show_minimap_viewport"  : true,
+"bold_folder_labels"            : true,
+"font_options"                  : ["gray_antialias", "subpixel_antialias"],
+"font_size"                     : 10,
+"indent_guide_options"          : ["draw_normal", "draw_active"],
+"line_padding_bottom"           : 3,
+"line_padding_top"              : 3,
+"overlay_scroll_bars"           : "enabled",
+"translate_tabs_to_spaces"      : true
+```
+
+#### Anaconda Settings
+```
+"anaconda_linting": false   // Disable Anaconda linting in lieu of SublimeLinter
+```
+
+### SublimeLinter Settings
+```
+"mark_style": squiggly_lines    // Copy default settings and add this one; changes the error style
+```
