@@ -20,6 +20,10 @@
     - Available on Package Control
     - Allows you to preview and build markdown documents
 
+- [Git](https://github.com/kemayo/sublime-text-git)
+	- Available on Package Control
+	- Implements a variety of git commands within Sublime
+
 - [GitGutter](https://github.com/jisaacks/GitGutter)
     - Available on Package Control
     - Allows you to view git diffs in the gutter on the left
