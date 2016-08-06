@@ -20,9 +20,10 @@
     - Available on Package Control
     - Allows you to preview and build markdown documents
 
-- [Git](https://github.com/kemayo/sublime-text-git)
+- [GitSavvy](https://github.com/divmain/GitSavvy)
 	- Available on Package Control
-	- Implements a variety of git commands within Sublime
+	- Implements a variety of git commands within Sublime and supports GitHub integration
+    - Provides a number of dashboards for git
 
 - [GitGutter](https://github.com/jisaacks/GitGutter)
     - Available on Package Control
