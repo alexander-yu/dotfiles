@@ -7,10 +7,12 @@
 	- Make sure to set the general appearance (in **Settings/Appearance & Behavior/Appearance**) to `Darcula`
 
 - General font settings (**Settings/Editor/Colors & Fonts/Font**):
+    - Font: Monospaced
 	- Size: 14
 	- Line spacing: 1.2
 
 - Console font settings (**Settings/Editor/Colors & Fonts/Console Font**):
+    - Font: Monospaced
 	- Size: 12
 	- Line spacing: 1.6
 
