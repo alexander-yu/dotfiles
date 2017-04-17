@@ -40,6 +40,9 @@
 
 - [SideBarEnhancements](https://github.com/titoBouzout/SideBarEnhancements)
 
+- [Anaconda](https://packagecontrol.io/packages/Anaconda)
+    - Available on Package Control
+
 ## Settings
 
 ### General Settings
