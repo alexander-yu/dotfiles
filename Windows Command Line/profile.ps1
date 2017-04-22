@@ -1,5 +1,7 @@
 Set-Location C:\Users\bzpru
 
+# Commented out in favor of pshazz
+<#
 function Get-Time { return $(get-date | foreach { $_.ToLongTimeString() } ) }
 function prompt
 {
@@ -12,6 +14,7 @@ function prompt
     write-host $(if ($nestedpromptlevel -ge 1) { '>>' }) -noNewLine
     return "> "
 }
+#>
 
 # LS.MSH 
 # Colorized LS function replacement 
