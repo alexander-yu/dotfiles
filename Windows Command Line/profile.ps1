@@ -1,53 +1,65 @@
 Set-Location C:\Users\bzpru
+Import-Module posh-git
 
-# Commented out in favor of pshazz
-<#
-function Get-Time { return $(get-date | foreach { $_.ToLongTimeString() } ) }
+$GitPromptSettings.BeforeText = '['
+$GitPromptSettings.AfterText = '] '
+$GitPromptSettings.BranchAheadStatusForegroundColor = [ConsoleColor]::Green
+$GitPromptSettings.WorkingForegroundColor = [ConsoleColor]::Magenta
+
+function Test-Administrator {
+    $user = [Security.Principal.WindowsIdentity]::GetCurrent();
+    (New-Object Security.Principal.WindowsPrincipal $user).IsInRole([Security.Principal.WindowsBuiltinRole]::Administrator)
+}
+
 function prompt
 {
-    # Write the time 
-    write-host "[" -noNewLine
-    write-host $(Get-Time) -foreground yellow -noNewLine
-    write-host "] " -noNewLine
+    $realLASTEXITCODE = $LASTEXITCODE
+
+    Write-Host
+
+    if (Test-Administrator) {
+        Write-Host "(Admin) " -NoNewline -ForegroundColor White
+    }
+
+    Write-Host "$ENV:USERNAME@" -NoNewline -ForegroundColor DarkYellow
+    Write-Host "$ENV:COMPUTERNAME" -NoNewline -ForegroundColor Magenta
+
     # Write the path
-    write-host $($(Get-Location).Path.replace($home,"~").replace("\","/")) -foreground green -noNewLine
-    write-host $(if ($nestedpromptlevel -ge 1) { '>>' }) -noNewLine
+    Write-Host " : " -NoNewline -ForegroundColor DarkGray
+    Write-Host $($(Get-Location).Path.replace($home, "~")) -NoNewline -ForegroundColor Blue
+    Write-Host " : " -NoNewline -ForegroundColor DarkGray
+    Write-Host (Get-Date -Format G) -NoNewline -ForegroundColor DarkMagenta
+    Write-Host " : " -NoNewline -ForegroundColor DarkGray
+    Write-Host $(if ($nestedpromptlevel -ge 1) { '>>' }) -NoNewLine
+
+    $global:LASTEXITCODE = $realLASTEXITCODE
+
+    Write-VcsStatus
+
+    Write-Host ""
+
     return "> "
 }
-#>
 
-# LS.MSH 
-# Colorized LS function replacement 
-# /\/\o\/\/ 2006 
-# http://mow001.blogspot.com 
-function LL
-{
-    param ($dir = ".", $all = $false) 
+# Color coded ls
+Import-Module Get-ChildItemColor
+Set-Alias l Get-ChildItemColor -option AllScope
+Set-Alias ls Get-ChildItemColorFormatWide -option AllScope
 
-    $origFg = $host.ui.rawui.foregroundColor 
-    if ( $all ) { $toList = ls -force $dir }
-    else { $toList = ls $dir }
+function Get-ChildItemForce { l -Force }
+set-alias la Get-ChildItemForce -option AllScope
 
-    foreach ($Item in $toList)  
-    { 
-        Switch ($Item.Extension)  
-        { 
-            ".Exe" {$host.ui.rawui.foregroundColor = "Yellow"} 
-            ".cmd" {$host.ui.rawui.foregroundColor = "Red"} 
-            ".msh" {$host.ui.rawui.foregroundColor = "Red"} 
-            ".vbs" {$host.ui.rawui.foregroundColor = "Red"} 
-            Default {$host.ui.rawui.foregroundColor = $origFg} 
-        } 
-        if ($item.Mode.StartsWith("d")) {$host.ui.rawui.foregroundColor = "Green"}
-        $item 
-    }  
-    $host.ui.rawui.foregroundColor = $origFg 
-}
+# Add zsh-like functionalities via PSReadLine
+Import-Module PSReadLine
 
-function lla
-{
-    param ( $dir=".")
-    ll $dir $true
-}
+Set-PSReadLineOption -HistoryNoDuplicates
+Set-PSReadLineOption -HistorySearchCursorMovesToEnd
+Set-PSReadLineOption -HistorySaveStyle SaveIncrementally
+Set-PSReadLineOption -MaximumHistoryCount 4000
+# history substring search
+Set-PSReadlineKeyHandler -Key UpArrow -Function HistorySearchBackward
+Set-PSReadlineKeyHandler -Key DownArrow -Function HistorySearchForward
 
-function la { ls -force }
+# Tab completion
+Set-PSReadlineKeyHandler -Chord 'Shift+Tab' -Function Complete
+Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
