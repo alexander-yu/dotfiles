@@ -3,6 +3,8 @@
 There are several choices of bash profiles that have appealed to me so far; partly
 because the prompts are pretty, but also because I appreciate the information provided.
 
+- [Git Tips and Tricks](https://git-scm.com/book/en/v1/Git-Basics-Tips-and-Tricks)
+
 - [Sexy Bash Prompt](https://github.com/twolfson/sexy-bash-prompt)
 
 - [Powerline](https://github.com/powerline/powerline)
