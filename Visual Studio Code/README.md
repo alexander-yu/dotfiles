@@ -10,3 +10,4 @@
 - [Atom One Dark Theme](https://github.com/akamud/vscode-theme-onedark)
 
 - [Set up Git MergeTool for VS Code](https://stackoverflow.com/questions/44549733/how-to-use-visual-studio-code-as-default-editor-for-git-mergetool/44549734#44549734)
+  - Integrates `git mergetool` with VS code to allow for easy resolution of merge conflicts
