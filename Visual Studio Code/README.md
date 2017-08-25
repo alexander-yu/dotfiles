@@ -11,3 +11,6 @@
 
 - [Set up Git MergeTool for VS Code](https://stackoverflow.com/questions/44549733/how-to-use-visual-studio-code-as-default-editor-for-git-mergetool/44549734#44549734)
   - Integrates `git mergetool` with VS code to allow for easy resolution of merge conflicts
+
+- [Git Lens](https://github.com/eamodio/vscode-gitlens)
+  - Powerful extension for git history, including `git blame` info and commit history
