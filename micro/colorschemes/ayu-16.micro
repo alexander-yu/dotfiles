@@ -1,5 +1,3 @@
-#CaptainMcClellan's personal color scheme.
-#16 colour version.
 color-link comment "bold black"
 color-link constant "cyan"
 color-link constant.bool "bold cyan"
