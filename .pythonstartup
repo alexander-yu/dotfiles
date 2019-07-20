@@ -1,0 +1,4 @@
+import rlcompleter
+import gnureadline
+
+gnureadline.parse_and_bind("tab: complete")
