@@ -1,4 +1,4 @@
-# Visual Studio Code
+# [VS Code](https://github.com/microsoft/vscode)
 
 ## Extensions
 

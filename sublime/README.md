@@ -1,4 +1,4 @@
-# Sublime Text 3
+# [Sublime Text 3](https://www.sublimetext.com/3)
 
 ## Packages
 

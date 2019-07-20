@@ -1,4 +1,4 @@
-# Windows Command Line
+# Windows
 
 ## cmder
 Download and install [cmder](http://cmder.net/). To get more themes, one good source would be [here](https://github.com/joonro/ConEmu-Color-Themes).
