@@ -23,7 +23,7 @@ If an error is thrown about `Get-ChildItemColor` or `PSReadLine` not existing as
 
 If working with `conda` environments, currently the `activate` and `deactivate` scripts do not work within Powershell (though it does work for Command Prompt); in other words, the environment functionality is broken for Powershell. As a temporary fix until this issue is resolved within Anaconda, copy the scripts [here](https://github.com/Liquidmantis/PSCondaEnvs) into `[Anaconda Installation]\Scripts`. The PS1 scripts should take precedence over the BAT scripts when working with Powershell.
 
-## Summary of Useful Utilities
+## Useful Tools
 - [Chocolatey](https://chocolatey.org/)
 - [Scoop](http://scoop.sh/)
 - [concfg](https://github.com/lukesampson/concfg)
