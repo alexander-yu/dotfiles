@@ -1,0 +1,3 @@
+brew "bat"
+brew "exa"
+brew "zsh"
