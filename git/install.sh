@@ -7,3 +7,6 @@ chmod +x /usr/local/bin/fsmonitor-watchman
 
 # Install git-recall
 npm install -g git-recall
+
+# Include git config
+git config --global include.path "$DOTFILES/git/.gitconfig"
