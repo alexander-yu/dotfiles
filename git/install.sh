@@ -1,4 +1,4 @@
-# Install any dependencies
+# Install any brew dependencies
 brew bundle
 
 # Install watchman hook
