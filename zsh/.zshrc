@@ -73,8 +73,6 @@ ZSH_THEME=""
 source /usr/local/bin/virtualenvwrapper.sh
 source $ZSH/oh-my-zsh.sh
 
-antigen use oh-my-zsh
-
 antigen bundle git
 antigen bundle colored-man-pages
 

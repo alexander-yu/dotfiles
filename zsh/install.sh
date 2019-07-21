@@ -1,3 +1,6 @@
+# Install any dependencies
+brew bundle
+
 # Install oh-my-zsh if it's not configured
 if [[ -n $ZSH  ]]; then
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
