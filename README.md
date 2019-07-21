@@ -1,3 +1,3 @@
-# Alex's Dotfiles
+# Alex's dotfiles
 
-This is a repository containing instructions and files for setting up/personalizing my dev environment, separated by topic.
+This is a repo containing the configurations for setting up my dev environment, separated by topic.

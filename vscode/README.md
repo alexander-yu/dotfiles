@@ -2,15 +2,24 @@
 
 ## Extensions
 
+### Themes/Icons
+
 - [Material Theme](https://github.com/equinusocio/vsc-material-theme)
-  - You can change the color variant/accent color to make it look nicer
+- [Material Icon Theme](https://github.com/PKief/vscode-material-icon-theme)
+- [Material Theme Icons](https://github.com/equinusocio/vsc-material-theme-icons)
+- [vscode-icons](https://github.com/vscode-icons/vscode-icons)
 
-- [One Monokai Theme](https://github.com/azemoh/vscode-one-monokai)
+### Language Support
 
-- [Atom One Dark Theme](https://github.com/akamud/vscode-theme-onedark)
+- [Python](https://github.com/Microsoft/vscode-python)
+- [Go](https://github.com/Microsoft/vscode-go)
+- [ESLint](https://github.com/Microsoft/vscode-eslint)
+- [Thrift](https://marketplace.visualstudio.com/items?itemName=cduruk.thrift&ssr=false#overview)
+- [Protobuf](https://github.com/zxh0/vscode-proto3)
+- [Markdown All in One](https://github.com/yzhang-gh/vscode-markdown)
+- [markdownlint](https://github.com/DavidAnson/vscode-markdownlint)
 
-- [Set up Git MergeTool for VS Code](https://stackoverflow.com/questions/44549733/how-to-use-visual-studio-code-as-default-editor-for-git-mergetool/44549734#44549734)
-  - Integrates `git mergetool` with VS code to allow for easy resolution of merge conflicts
+### Productivity
 
 - [Git Lens](https://github.com/eamodio/vscode-gitlens)
-  - Powerful extension for git history, including `git blame` info and commit history
+- [autoDocstring](https://github.com/NilsJPWerner/autoDocstring)

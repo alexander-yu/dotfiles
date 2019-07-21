@@ -1,0 +1,48 @@
+{
+    "gitlens.advanced.messages": {
+        "suppressShowKeyBindingsNotice": true
+    },
+    "workbench.colorTheme": "Material Theme Darker",
+    "files.trimTrailingWhitespace": true,
+    "python.testing.unittestEnabled": true,
+    "go.toolsGopath": "~/go",
+    "breadcrumbs.enabled": true,
+    "javascript.validate.enable": false,
+    "explorer.confirmDelete": false,
+    "files.associations": {
+        "*.avsc": "json",
+        "*.aurora": "python"
+    },
+    "workbench.fontAliasing": "auto",
+    "explorer.confirmDragAndDrop": false,
+    "go.testFlags": [
+        "-v",
+        "-race"
+    ],
+    "python.pythonPath": "/usr/local/bin/python",
+    "go.autocompleteUnimportedPackages": true,
+    "python.analysis.logLevel": "Trace",
+    "files.exclude": {
+        "**/*.pyc": true
+    },
+    "python.linting.ignorePatterns": [
+        ".vscode/*.py",
+        "**/site-packages/**/*.py"
+    ],
+    "search.usePCRE2": true,
+    "python.linting.pylintEnabled": true,
+    "python.workspaceSymbols.exclusionPatterns": [
+        "**/site-packages/**"
+    ],
+    "go.gotoSymbol.includeGoroot": true,
+    "python.testing.autoTestDiscoverOnSaveEnabled": false,
+    "eslint.nodePath": null,
+    "extensions.ignoreRecommendations": false,
+    "workbench.startupEditor": "welcomePage",
+    "go.testTimeout": "120s",
+    "files.trimFinalNewlines": true,
+    "autoDocstring.docstringFormat": "sphinx",
+    "editor.suggestSelection": "first",
+    "window.zoomLevel": 0,
+    "workbench.iconTheme": "vscode-icons",
+}
