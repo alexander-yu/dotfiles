@@ -68,17 +68,22 @@ ZSH_THEME=""
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(
-    git
-    colored-man-pages
-    zsh-completions
-    zsh-autosuggestions
-    zsh-syntax-highlighting
-    history-substring-search
-)
+# plugins=()
 
 source /usr/local/bin/virtualenvwrapper.sh
 source $ZSH/oh-my-zsh.sh
+
+antigen use oh-my-zsh
+
+antigen bundle git
+antigen bundle colored-man-pages
+
+antigen bundle zsh-users/zsh-completions
+antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle zsh-users/zsh-history-substring-search
+
+antigen apply
 
 # Use my local branch of the pure prompt, which adds support for stash info
 fpath=("$HOME/.pure-stash-branch" $fpath)
