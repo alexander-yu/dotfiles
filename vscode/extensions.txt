@@ -1,0 +1,13 @@
+equinusocio.vsc-material-theme
+pkief.material-icon-theme
+equinusocio.vsc-material-theme-icons
+vscode-icons-team.vscode-icons
+ms-python.python
+ms-vscode.go
+dbaeumer.vscode-eslint
+cduruk.thrift
+zxh404.vscode-proto3
+yzhang.markdown-all-in-one
+davidanson.vscode-markdownlint
+eamodio.gitlens
+njpwerner.autodocstring
