@@ -1,4 +1,6 @@
-# [VS Code](https://github.com/microsoft/vscode)
+# [vscode](https://github.com/microsoft/vscode)
+
+- Installs the extensions listed below for vscode
 
 ## Extensions
 
