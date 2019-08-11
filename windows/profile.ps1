@@ -1,10 +1,10 @@
-Set-Location C:\Users\bzpru
+Set-Location $HOME
 Import-Module posh-git
 
-$GitPromptSettings.BeforeText = '['
-$GitPromptSettings.AfterText = '] '
-$GitPromptSettings.BranchAheadStatusForegroundColor = [ConsoleColor]::Green
-$GitPromptSettings.WorkingForegroundColor = [ConsoleColor]::Magenta
+$GitPromptSettings.BeforeStatus = 'on ['
+$GitPromptSettings.AfterStatus = ']'
+$GitPromptSettings.DefaultPromptBeforeSuffix.Text = '`n'
+$GitPromptSettings.EnableStashStatus = $true
 
 function Test-Administrator {
     $user = [Security.Principal.WindowsIdentity]::GetCurrent();
@@ -13,49 +13,45 @@ function Test-Administrator {
 
 function prompt
 {
-    $realLASTEXITCODE = $LASTEXITCODE
-
-    Write-Host
-
     if (Test-Administrator) {
-        Write-Host "(Admin) " -NoNewline -ForegroundColor White
+        $prompt = Write-Prompt "(Admin) " -ForegroundColor ([ConsoleColor]::White)
+    } else {
+        $prompt = Write-Prompt ""
     }
 
-    Write-Host "$ENV:USERNAME@" -NoNewline -ForegroundColor DarkYellow
-    Write-Host "$ENV:COMPUTERNAME" -NoNewline -ForegroundColor Magenta
-
-    # Write the path
-    Write-Host " : " -NoNewline -ForegroundColor DarkGray
-    Write-Host $($(Get-Location).Path.replace($home, "~")) -NoNewline -ForegroundColor Blue
-    Write-Host " : " -NoNewline -ForegroundColor DarkGray
-    Write-Host (Get-Date -Format G) -NoNewline -ForegroundColor DarkMagenta
-    Write-Host " : " -NoNewline -ForegroundColor DarkGray
-    Write-Host $(if ($nestedpromptlevel -ge 1) { '>>' }) -NoNewLine
-
-    $global:LASTEXITCODE = $realLASTEXITCODE
-
-    Write-VcsStatus
-
-    Write-Host ""
-
-    return "> "
+    $prompt += Write-Prompt "$ENV:USERNAME" -ForegroundColor ([ConsoleColor]::Red)
+    $prompt += Write-Prompt " at " -ForegroundColor ([ConsoleColor]::White)
+    $prompt += Write-Prompt "$ENV:COMPUTERNAME" -ForegroundColor ([ConsoleColor]::DarkYellow)
+    $prompt += Write-Prompt " in " -ForegroundColor ([ConsoleColor]::White)
+    $prompt += & $GitPromptScriptBlock
+    $prompt
 }
 
 # Color coded ls
 Import-Module Get-ChildItemColor
-Set-Alias l Get-ChildItemColor -option AllScope
+Set-Alias ll Get-ChildItemColor -option AllScope
 Set-Alias ls Get-ChildItemColorFormatWide -option AllScope
 
-function Get-ChildItemForce { l -Force }
+function Get-ChildItemForce { ll -Force }
 set-alias la Get-ChildItemForce -option AllScope
 
 # Add zsh-like functionalities via PSReadLine
 Import-Module PSReadLine
 
+# Edit command line syntax highlighting
+Set-PSReadLineOption -Colors @{
+    "Command" = [ConsoleColor]::DarkYellow
+    "String" = [ConsoleColor]::Magenta
+    "Operator" = [ConsoleColor]::DarkMagenta
+    "Parameter" = [ConsoleColor]::DarkGreen
+    "Variable" = [ConsoleColor]::DarkBlue
+}
+
 Set-PSReadLineOption -HistoryNoDuplicates
 Set-PSReadLineOption -HistorySearchCursorMovesToEnd
 Set-PSReadLineOption -HistorySaveStyle SaveIncrementally
 Set-PSReadLineOption -MaximumHistoryCount 4000
+
 # history substring search
 Set-PSReadlineKeyHandler -Key UpArrow -Function HistorySearchBackward
 Set-PSReadlineKeyHandler -Key DownArrow -Function HistorySearchForward
