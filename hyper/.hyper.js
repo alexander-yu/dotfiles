@@ -166,7 +166,6 @@ module.exports = {
     'hyperterm-tabs',
     'hyper-tabs-enhanced',
     'hypercwd',
-    'hyper-statusline'
   ],
 
   // in development, you can create a directory under

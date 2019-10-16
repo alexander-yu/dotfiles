@@ -16,5 +16,5 @@ refresh () {
 }
 
 uuid () {
-    python -c "import uuid; print(uuid.uuid4())" | tee /dev/tty | pbcopy
+    python -c "import uuid; print(uuid.uuid4())" | tee /dev/tty | tr -d '\n' | pbcopy
 }
