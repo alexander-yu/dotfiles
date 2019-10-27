@@ -80,14 +80,15 @@ antigen bundle zsh-users/zsh-completions
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-history-substring-search
+antigen theme romkatv/powerlevel10k
 
 antigen apply
 
 # Use my local branch of the pure prompt, which adds support for stash info
-fpath=("$HOME/.pure-stash-branch" $fpath)
+#fpath=("$HOME/.pure-stash-branch" $fpath)
 
 autoload -U promptinit; promptinit
-prompt pure
+#prompt pure
 
 # User configuration
 
