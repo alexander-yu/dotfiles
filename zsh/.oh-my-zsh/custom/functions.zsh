@@ -1,14 +1,12 @@
 tabexec () {
-    echo "$@" > ~/Desktop/tmp.zsh
-    chmod +x ~/Desktop/tmp.zsh
-    cmd="do shell script \"hyper ~/Desktop/tmp.zsh\""
-    osascript -e "$cmd"
+    tmpfile=$(mktemp)
+    echo "trap 'rm -f $tmpfile' EXIT; $@" > "$tmpfile"
+    chmod +x "$tmpfile"
+    hyper "$tmpfile"
 }
 
 conj () {
-    git stash
-    "$@"
-    git stash pop
+    git stash && "$@" && git stash pop
 }
 
 refresh () {
