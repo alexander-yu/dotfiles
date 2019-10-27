@@ -2,7 +2,7 @@ tabexec () {
     tmpfile=$(mktemp)
     echo "trap 'rm -f $tmpfile' EXIT; $@" > "$tmpfile"
     chmod +x "$tmpfile"
-    hyper "$tmpfile"
+    $TERM_PROGRAM "$tmpfile"
 }
 
 conj () {
