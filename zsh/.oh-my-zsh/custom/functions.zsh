@@ -12,9 +12,17 @@ conj () {
 }
 
 refresh () {
-    source $HOME/.zshrc
+    exec zsh
 }
 
 uuid () {
     python -c "import uuid; print(uuid.uuid4())" | tee /dev/tty | tr -d '\n' | pbcopy
+}
+
+notify () {
+    case `uname` in
+        Darwin)
+            osascript -e "display notification \"$1\" with title \"$2\" subtitle \"$3\""
+        ;;
+    esac
 }
