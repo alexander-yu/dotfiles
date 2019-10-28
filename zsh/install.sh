@@ -17,3 +17,6 @@ ln -s "$DOTFILES/zsh/.zshrc" "$HOME/.zshrc"
 
 # Symlink oh-my-zsh custom files
 ln -s "$DOTFILES/zsh/.oh-my-zsh/custom/*.zsh" "$ZSH/custom"
+
+# Symlink powerlevel10k config
+ln -s "$DOTFILES/zsh/.p10k.zsh" "$HOME/.p10k.zsh"
