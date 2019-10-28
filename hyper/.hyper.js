@@ -142,10 +142,6 @@ module.exports = {
     hyperTabs: {
       trafficButtons: true,
       tabIconsColored: true,
-    },
-
-    hyperStatusLine: {
-      footerTransparent: true,
     }
   },
 
