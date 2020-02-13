@@ -16,7 +16,7 @@ curl -L git.io/antigen > "$DOTFILES/zsh/.oh-my-zsh/custom/antigen.zsh"
 ln -s "$DOTFILES/zsh/.zshrc" "$HOME/.zshrc"
 
 # Symlink oh-my-zsh custom files
-ln -s "$DOTFILES/zsh/.oh-my-zsh/custom/*.zsh" "$ZSH/custom"
+ln -s "$DOTFILES"/zsh/.oh-my-zsh/custom/* "$ZSH/custom"
 
 # Symlink powerlevel10k config
 ln -s "$DOTFILES/zsh/.p10k.zsh" "$HOME/.p10k.zsh"
