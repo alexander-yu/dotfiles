@@ -83,6 +83,7 @@ source $ZSH/oh-my-zsh.sh
 antigen bundle git
 antigen bundle colored-man-pages
 
+antigen bundle robbyrussell/oh-my-zsh plugins/gitfast
 antigen bundle zsh-users/zsh-completions
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-syntax-highlighting

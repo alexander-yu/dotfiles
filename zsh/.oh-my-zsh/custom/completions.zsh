@@ -1,7 +1,3 @@
-# Load Git completion
-zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
-fpath=(~/.zsh $fpath)
-
 ###-begin-npm-completion-###
 #
 # npm command completion script
