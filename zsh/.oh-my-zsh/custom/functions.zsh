@@ -2,7 +2,15 @@ tabexec () {
     tmpfile=$(mktemp)
     echo "trap 'rm -f $tmpfile' EXIT; $@" > "$tmpfile"
     chmod +x "$tmpfile"
-    $TERM_PROGRAM "$tmpfile"
+    "$TERM_PROGRAM" "$tmpfile"
+}
+
+tab () {
+    if [[ -n $1 ]]; then
+        "$TERM_PROGRAM" "$1"
+    else
+        "$TERM_PROGRAM" .
+    fi
 }
 
 conj () {
@@ -23,4 +31,9 @@ notify () {
             osascript -e "display notification \"$1\" with title \"$2\" subtitle \"$3\""
         ;;
     esac
+}
+
+branch () {
+    current_branch=$(git_current_branch)
+    git checkout -b "$@" && git branch -u "$current_branch"
 }
