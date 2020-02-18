@@ -26,7 +26,7 @@ uuid () {
 }
 
 notify () {
-    case `uname` in
+    case "$(uname)" in
         Darwin)
             osascript -e "display notification \"$1\" with title \"$2\" subtitle \"$3\""
         ;;
@@ -34,8 +34,15 @@ notify () {
 }
 
 branch () {
-    current_branch=$(git_current_branch)
-    git checkout -b "$@" && git branch -u "$current_branch"
+    local parent
+
+    if [[ -n "$2" ]]; then
+        parent="$2"
+    else
+        parent=$(git_current_branch)
+    fi
+
+    git checkout -b "$@" && git branch -u "$parent"
 }
 
 unstack () {
