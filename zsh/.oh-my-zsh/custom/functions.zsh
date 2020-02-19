@@ -47,11 +47,6 @@ branch () {
 
 unstack () {
     if [[ $(git_current_branch) != "master" ]]; then
-        upstream=$(git rev-parse --symbolic-full-name --abbrev-ref @{upstream} 2> /dev/null)
-        ret="$?"
-
-        if [[ "$ret" == 0 ]]; then
-            git branch --unset-upstream && git rebase master
-        fi
+        git branch --unset-upstream && git rebase master
     fi
 }
