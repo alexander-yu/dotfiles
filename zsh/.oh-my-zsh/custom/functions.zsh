@@ -47,6 +47,6 @@ branch () {
 
 unstack () {
     if [[ $(git_current_branch) != "master" ]]; then
-        git branch --unset-upstream && git rebase master
+        git branch --unset-upstream && git rebase master && git branch -u master
     fi
 }
