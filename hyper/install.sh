@@ -1,2 +1,2 @@
 # Symlink hyper config
-ln -s "$DOTFILES/hyper/.hyper.js" "$HOME/.hyper.js"
+ln -s "$(pwd)/.hyper.js" "$HOME/.hyper.js"

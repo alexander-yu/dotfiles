@@ -3,6 +3,3 @@
 
 # Install any brew dependencies
 brew bundle
-
-# Set dotfiles path
-export DOTFILES=$(pwd)

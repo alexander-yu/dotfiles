@@ -10,13 +10,13 @@ if [[ -n $ZSH  ]]; then
 fi
 
 # Install antigen
-curl -L git.io/antigen > "$DOTFILES/zsh/.oh-my-zsh/custom/antigen.zsh"
+curl -L git.io/antigen > "$(pwd)/zsh/.oh-my-zsh/custom/antigen.zsh"
 
 # Symlink .zshrc
-ln -s "$DOTFILES/zsh/.zshrc" "$HOME/.zshrc"
+ln -s "$(pwd)/zsh/.zshrc" "$HOME/.zshrc"
 
 # Symlink oh-my-zsh custom files
-ln -s "$DOTFILES"/zsh/.oh-my-zsh/custom/* "$ZSH/custom"
+ln -s "$(pwd)"/zsh/.oh-my-zsh/custom/* "$ZSH/custom"
 
 # Symlink powerlevel10k config
-ln -s "$DOTFILES/zsh/.p10k.zsh" "$HOME/.p10k.zsh"
+ln -s "$(pwd)/zsh/.p10k.zsh" "$HOME/.p10k.zsh"

@@ -1,2 +1,2 @@
 # Symlink .vimrc
-ln -s "$DOTFILES/vim/.vimrc" "$HOME/.vimrc"
+ln -s "$(pwd)/vim/.vimrc" "$HOME/.vimrc"
