@@ -1,3 +1,10 @@
+tempexec () {
+    tmpfile=$(mktemp)
+    echo "trap 'rm -f $tmpfile' EXIT; $@" > "$tmpfile"
+    chmod +x "$tmpfile"
+    zsh "$tmpfile"
+}
+
 tabexec () {
     tmpfile=$(mktemp)
     echo "trap 'rm -f $tmpfile' EXIT; $@" > "$tmpfile"
