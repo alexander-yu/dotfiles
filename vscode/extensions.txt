@@ -11,3 +11,4 @@ yzhang.markdown-all-in-one
 davidanson.vscode-markdownlint
 eamodio.gitlens
 njpwerner.autodocstring
+alexander-yu.vscode-open
