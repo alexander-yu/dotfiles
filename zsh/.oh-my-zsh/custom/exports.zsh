@@ -1,5 +1,6 @@
 # Paths
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 # Python virtual environment
 export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
