@@ -59,3 +59,12 @@ Set-PSReadlineKeyHandler -Key DownArrow -Function HistorySearchForward
 # Tab completion
 Set-PSReadlineKeyHandler -Chord 'Shift+Tab' -Function Complete
 Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
+
+# Add scripts to PATH
+Get-ChildItem -Path $HOME\git\scripts* -Directory -Force -ErrorAction SilentlyContinue -Exclude .git,.pytest_cache | ForEach-Object {
+    $dir = $_.FullName
+    $ENV:PATH = "$ENV:PATH;$dir"
+}
+
+# Add to PATHEXT
+$ENV:PATHEXT = "$ENV:PATHEXT;.PY"
