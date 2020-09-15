@@ -1,2 +1,3 @@
 brew "bat"
 brew "exa"
+brew "fzf"

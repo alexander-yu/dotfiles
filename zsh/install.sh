@@ -1,6 +1,9 @@
 # Install any brew dependencies
 brew bundle
 
+# Install fzf bindings and completion
+$(brew --prefix)/opt/fzf/install
+
 # Install any python dependencies
 pip install -r requirements.txt
 
