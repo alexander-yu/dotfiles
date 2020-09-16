@@ -1,4 +1,3 @@
-Set-Location $HOME
 Import-Module posh-git
 
 $GitPromptSettings.BeforeStatus = 'on ['
