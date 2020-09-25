@@ -29,7 +29,7 @@ refresh () {
 }
 
 uuid () {
-    python -c "import uuid; print(uuid.uuid4())" | tee /dev/tty | tr -d '\n' | pbcopy
+    uuidgen | tr "[:upper:]" "[:lower:]" | tee /dev/tty | tr -d "\n" | pbcopy
 }
 
 notify () {
