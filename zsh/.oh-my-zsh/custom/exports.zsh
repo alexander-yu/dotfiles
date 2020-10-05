@@ -12,3 +12,4 @@ export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 
 # Miscellaneous
 export EDITOR=micro
+export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --no-ignore-vcs -g "!{node_modules,.git}"'
