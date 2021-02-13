@@ -2,4 +2,4 @@
 pip install -r requirements.txt
 
 # Symlink .pythonstartup
-ln -s "${0:a:h}/.pythonstartup" "$HOME/.pythonstartup"
+ln -s "$(readlink -f $(dirname $0))/.pythonstartup" "$HOME/.pythonstartup"

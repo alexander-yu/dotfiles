@@ -1,2 +1,2 @@
 # Symlink .vimrc
-ln -s "${0:a:h}/.vimrc" "$HOME/.vimrc"
+ln -s "$(readlink -f $(dirname $0))/.vimrc" "$HOME/.vimrc"
