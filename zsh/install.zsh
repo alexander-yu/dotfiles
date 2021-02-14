@@ -4,9 +4,6 @@ brew bundle
 # Install fzf bindings and completion
 $(brew --prefix)/opt/fzf/install
 
-# Install any python dependencies
-pip install -r requirements.txt
-
 # Install oh-my-zsh if it's not configured
 if [[ -n $ZSH  ]]; then
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"

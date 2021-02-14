@@ -77,7 +77,6 @@ export ZSH="$HOME/.oh-my-zsh"
 # Add wisely, as too many plugins slow down shell startup.
 # plugins=()
 
-source /usr/local/bin/virtualenvwrapper.sh
 source $ZSH/oh-my-zsh.sh
 
 antigen bundle git
