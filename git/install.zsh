@@ -1,14 +1,16 @@
-set -eo pipefail
+(
+    set -eo pipefail
 
-# Install any brew dependencies
-brew bundle
+    # Install any brew dependencies
+    brew bundle
 
-# Install watchman hook
-curl https://raw.githubusercontent.com/git/git/master/templates/hooks--fsmonitor-watchman.sample -o /usr/local/bin/fsmonitor-watchman
-chmod +x /usr/local/bin/fsmonitor-watchman
+    # Install watchman hook
+    curl https://raw.githubusercontent.com/git/git/master/templates/hooks--fsmonitor-watchman.sample -o /usr/local/bin/fsmonitor-watchman
+    chmod +x /usr/local/bin/fsmonitor-watchman
 
-# Install git-recall
-npm install -g git-recall
+    # Install git-recall
+    npm install -g git-recall
 
-# Include git config
-git config --global include.path "$(readlink -f $(dirname $0))/.gitconfig"
+    # Include git config
+    git config --global include.path "$(readlink -f $(dirname $0))/.gitconfig"
+)

@@ -1,5 +1,6 @@
+(
+    set -eo pipefail
 
-set -eo pipefail
-
-# Install any brew dependencies
-brew bundle
+    # Install any brew dependencies
+    brew bundle
+)
