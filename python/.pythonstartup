@@ -1,4 +1,8 @@
 import rlcompleter
-import gnureadline
 
-gnureadline.parse_and_bind("tab: complete")
+try:
+    import gnureadline as readline
+except ModuleNotFoundError:
+    import readline
+
+readline.parse_and_bind("tab: complete")
