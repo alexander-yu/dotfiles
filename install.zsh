@@ -12,7 +12,7 @@
         Linux)
             # Install nix
             sh <(curl -L https://nixos.org/nix/install) --daemon
-            nix-env -if $(git rev-parse --show-toplevel)/install.zsh
+            nix-env -if "${0:a:h}/install.zsh"
         ;;
     esac
 )

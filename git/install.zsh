@@ -6,7 +6,7 @@
             brew bundle
         ;;
         Linux)
-            nix-env -if $(git rev-parse --show-toplevel)/git/install.zsh
+            nix-env -if "${0:a:h}/install.zsh"
         ;;
     esac
 
@@ -18,7 +18,7 @@
     npm install -g git-recall
 
     # Include git config
-    git config --global include.path "$(git rev-parse --show-toplevel)/git/.gitconfig"
+    git config --global include.path "${0:a:h}/.gitconfig"
 
     case "$(uname)" in
         Linux)

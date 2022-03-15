@@ -6,7 +6,7 @@
             brew bundle
         ;;
         Linux)
-            nix-env -if $(git rev-parse --show-toplevel)/zsh/install.zsh
+            nix-env -if "${0:a:h}/zsh/install.zsh"
         ;;
     esac
 
@@ -18,17 +18,15 @@
         sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
     fi
 
-    local repo=$(git rev-parse --show-toplevel)
-
     # Install antigen
-    curl -L git.io/antigen > "$repo/zsh/.oh-my-zsh/custom/antigen.zsh"
+    curl -L git.io/antigen > "${0:a:h}/.oh-my-zsh/custom/antigen.zsh"
 
     # Symlink .zshrc
-    ln -s "$repo/zsh/.zshrc" "$HOME/.zshrc"
+    ln -s "${0:a:h}/.zshrc" "$HOME/.zshrc"
 
     # Symlink oh-my-zsh custom files
-    ln -s "$repo/zsh"/.oh-my-zsh/custom/* "$ZSH/custom"
+    ln -s "${0:a:h}"/.oh-my-zsh/custom/* "$ZSH/custom"
 
     # Symlink powerlevel10k config
-    ln -s "$repo/zsh/.p10k.zsh" "$HOME/.p10k.zsh"
+    ln -s "${0:a:h}/.p10k.zsh" "$HOME/.p10k.zsh"
 )
