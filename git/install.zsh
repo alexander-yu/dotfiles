@@ -13,4 +13,11 @@
 
     # Include git config
     git config --global include.path "$(git rev-parse --show-toplevel)/git/.gitconfig"
+
+    case "$(uname)" in
+        Linux)
+            # Install JSON::PP for fsmonitor-watchman
+            sudo dnf install perl-JSON-PP
+        ;;
+    esac
 )
