@@ -12,5 +12,5 @@
     npm install -g git-recall
 
     # Include git config
-    git config --global include.path "$(readlink -f $(dirname $0))/.gitconfig"
+    git config --global include.path "$(git rev-parse --show-toplevel)/git/.gitconfig"
 )

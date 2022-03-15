@@ -2,5 +2,5 @@
     set -eo pipefail
 
     # Symlink hyper config
-    ln -s "$(readlink -f $(dirname $0))/.hyper.js" "$HOME/.hyper.js"
+    ln -s "$(git rev-parse --show-toplevel)/hyper/.hyper.js" "$HOME/.hyper.js"
 )

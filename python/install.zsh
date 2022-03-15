@@ -5,5 +5,5 @@
     pip install -r requirements.txt
 
     # Symlink .pythonstartup
-    ln -s "$(readlink -f $(dirname $0))/.pythonstartup" "$HOME/.pythonstartup"
+    ln -s "$(git rev-parse --show-toplevel)/python/.pythonstartup" "$HOME/.pythonstartup"
 )

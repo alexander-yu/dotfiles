@@ -2,5 +2,5 @@
     set -eo pipefail
 
     # Symlink .vimrc
-    ln -s "$(readlink -f $(dirname $0))/.vimrc" "$HOME/.vimrc"
+    ln -s "$(git rev-parse --show-toplevel)/vim/.vimrc" "$HOME/.vimrc"
 )
