@@ -1,8 +1,14 @@
 (
     set -eo pipefail
 
-    # Install any brew dependencies
-    brew bundle
+    case "$(uname)" in
+        Darwin)
+            brew bundle
+        ;;
+        Linux)
+            nix-env -if $(git rev-parse --show-toplevel)/zsh/install.zsh
+        ;;
+    esac
 
     # Install fzf bindings and completion
     $(brew --prefix)/opt/fzf/install

@@ -1,8 +1,14 @@
 (
     set -eo pipefail
 
-    # Install any brew dependencies
-    brew bundle
+    case "$(uname)" in
+        Darwin)
+            brew bundle
+        ;;
+        Linux)
+            nix-env -if $(git rev-parse --show-toplevel)/git/install.zsh
+        ;;
+    esac
 
     # Install watchman hook
     curl https://raw.githubusercontent.com/git/git/master/templates/hooks--fsmonitor-watchman.sample -o /usr/local/bin/fsmonitor-watchman

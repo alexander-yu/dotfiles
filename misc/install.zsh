@@ -1,6 +1,12 @@
 (
     set -eo pipefail
 
-    # Install any brew dependencies
-    brew bundle
+    case "$(uname)" in
+        Darwin)
+            brew bundle
+        ;;
+        Linux)
+            nix-env -if $(git rev-parse --show-toplevel)/misc/install.zsh
+        ;;
+    esac
 )
