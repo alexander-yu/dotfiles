@@ -1,12 +1,14 @@
 (
     set -eo pipefail
 
+    local dir="$(git rev-parse --show-toplevel)/git"
+
     case "$(uname)" in
         Darwin)
             brew bundle
         ;;
         Linux)
-            nix-env -if "${0:a:h}/install.zsh"
+            nix-env -if "$dir/install.zsh"
         ;;
     esac
 
@@ -18,7 +20,7 @@
     npm install -g git-recall
 
     # Include git config
-    git config --global include.path "${0:a:h}/.gitconfig"
+    git config --global include.path "$dir/.gitconfig"
 
     case "$(uname)" in
         Linux)

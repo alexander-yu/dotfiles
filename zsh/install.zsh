@@ -1,6 +1,8 @@
 (
     set -eo pipefail
 
+    local dir="$(git rev-parse --show-toplevel)/zsh"
+
     case "$(uname)" in
         Darwin)
             brew bundle
@@ -9,7 +11,7 @@
             $(brew --prefix)/opt/fzf/install
         ;;
         Linux)
-            nix-env -if "${0:a:h}/zsh/install.zsh"
+            nix-env -if "$dir/zsh/install.zsh"
         ;;
     esac
 
@@ -19,14 +21,14 @@
     fi
 
     # Install antigen
-    curl -L git.io/antigen > "${0:a:h}/.oh-my-zsh/custom/antigen.zsh"
+    curl -L git.io/antigen > "$dir/.oh-my-zsh/custom/antigen.zsh"
 
     # Symlink .zshrc
-    ln -s "${0:a:h}/.zshrc" "$HOME/.zshrc"
+    ln -s "$dir/.zshrc" "$HOME/.zshrc"
 
     # Symlink oh-my-zsh custom files
-    ln -s "${0:a:h}"/.oh-my-zsh/custom/* "$ZSH/custom"
+    ln -s "$dir"/.oh-my-zsh/custom/* "$ZSH/custom"
 
     # Symlink powerlevel10k config
-    ln -s "${0:a:h}/.p10k.zsh" "$HOME/.p10k.zsh"
+    ln -s "$dir/.p10k.zsh" "$HOME/.p10k.zsh"
 )
