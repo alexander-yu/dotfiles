@@ -6,7 +6,7 @@
             brew bundle
         ;;
         Linux)
-            nix-env -if "$(git rev-parse --show-toplevel)/misc/install.zsh"
+            nix-env -if "$(git rev-parse --show-toplevel)/misc/pkgs.nix"
         ;;
     esac
 )

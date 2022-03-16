@@ -11,7 +11,7 @@
             $(brew --prefix)/opt/fzf/install
         ;;
         Linux)
-            nix-env -if "$dir/zsh/install.zsh"
+            nix-env -if "$dir/zsh/pkgs.nix"
         ;;
     esac
 
