@@ -4,14 +4,14 @@
     case "$(uname)" in
         Darwin)
             brew bundle
+
+            # Install fzf bindings and completion
+            $(brew --prefix)/opt/fzf/install
         ;;
         Linux)
             nix-env -if "${0:a:h}/zsh/install.zsh"
         ;;
     esac
-
-    # Install fzf bindings and completion
-    $(brew --prefix)/opt/fzf/install
 
     # Install oh-my-zsh if it's not configured
     if [[ -n $ZSH  ]]; then
