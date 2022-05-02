@@ -154,7 +154,8 @@ module.exports = {
     'hyper-chesterish',
     'hyperterm-tabs',
     'hyper-tabs-enhanced',
-    'hypercwd'
+    'hypercwd',
+    'hyper-pane',
   ],
 
   // in development, you can create a directory under
