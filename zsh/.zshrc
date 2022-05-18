@@ -87,6 +87,7 @@ antigen bundle colored-man-pages
 
 antigen bundle Aloxaf/fzf-tab
 antigen bundle robbyrussell/oh-my-zsh plugins/gitfast
+antigen bundle wfxr/forgit
 antigen bundle zdharma-continuum/fast-syntax-highlighting
 antigen bundle zsh-users/zsh-completions
 antigen bundle zsh-users/zsh-autosuggestions
