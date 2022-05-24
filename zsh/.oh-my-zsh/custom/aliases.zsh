@@ -4,3 +4,4 @@ alias l='ll -a'
 alias la='ls -a'
 alias rm='rm -i'
 alias cat=bat
+forgit_checkout_commit=gcoc
