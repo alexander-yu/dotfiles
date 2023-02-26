@@ -31,4 +31,7 @@
 
     # Symlink powerlevel10k config
     ln -s "$dir/.p10k.zsh" "$HOME/.p10k.zsh"
+
+    # Install ripgrep completions
+    wget -P $HOME/completions https://github.com/BurntSushi/ripgrep/blob/master/complete/_rg
 )
