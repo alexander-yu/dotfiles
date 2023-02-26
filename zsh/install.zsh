@@ -33,5 +33,5 @@
     ln -s "$dir/.p10k.zsh" "$HOME/.p10k.zsh"
 
     # Install ripgrep completions
-    wget -P $HOME/completions https://github.com/BurntSushi/ripgrep/blob/master/complete/_rg
+    wget -P $HOME/completions https://raw.githubusercontent.com/BurntSushi/ripgrep/master/complete/_rg
 )
