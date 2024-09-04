@@ -2,6 +2,6 @@ with import <nixpkgs>{};
 
 [
     bat
-    exa
+    eza
     fzf
 ]

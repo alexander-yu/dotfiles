@@ -1,4 +1,4 @@
-alias ls='exa -F'
+alias ls='eza -F'
 alias ll='ls -l'
 alias l='ll -a'
 alias la='ls -a'
