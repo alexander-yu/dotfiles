@@ -34,4 +34,7 @@
 
     # Install ripgrep completions
     wget -P $ZSH/cache/completions https://raw.githubusercontent.com/BurntSushi/ripgrep/master/complete/_rg
+
+    # Symlink iterm shell integration
+    ln -s "$dir/.iterm2_shell_integration" "$HOME/.iterm2_shell_integration"
 )
