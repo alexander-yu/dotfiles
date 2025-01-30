@@ -2,6 +2,6 @@
     "Alt-/": "lua:comment.comment",
     "CtrlUnderscore": "lua:comment.comment",
     "Ctrl-w": "DeleteWordLeft",
-    "\u001bctrlleft": "CursorStart",
-    "\u001bctrlright": "CursorEnd"
+    "\u001bctrlleft": "StartOfLine",
+    "\u001bctrlright": "EndOfLine"
 }
