@@ -1147,7 +1147,7 @@
 	<key>HideMenuBarInFullscreen</key>
 	<true/>
 	<key>HideScrollbar</key>
-	<false/>
+	<true/>
 	<key>HideTab</key>
 	<true/>
 	<key>HideTabNumber</key>
@@ -2159,6 +2159,19 @@
 					<key>Version</key>
 					<integer>2</integer>
 				</dict>
+				<key>0xf702-0x240000-0x7b</key>
+				<dict>
+					<key>Action</key>
+					<integer>10</integer>
+					<key>Apply Mode</key>
+					<integer>0</integer>
+					<key>Escaping</key>
+					<integer>2</integer>
+					<key>Text</key>
+					<string>ctrlleft</string>
+					<key>Version</key>
+					<integer>2</integer>
+				</dict>
 				<key>0xf702-0x280000</key>
 				<dict>
 					<key>Action</key>
@@ -2166,12 +2179,38 @@
 					<key>Text</key>
 					<string>b</string>
 				</dict>
+				<key>0xf702-0x2a0000-0x7b</key>
+				<dict>
+					<key>Action</key>
+					<integer>13</integer>
+					<key>Apply Mode</key>
+					<integer>0</integer>
+					<key>Escaping</key>
+					<integer>2</integer>
+					<key>Text</key>
+					<string></string>
+					<key>Version</key>
+					<integer>2</integer>
+				</dict>
 				<key>0xf702-0x300000</key>
 				<dict>
 					<key>Action</key>
 					<integer>11</integer>
 					<key>Text</key>
 					<string>0x1</string>
+				</dict>
+				<key>0xf703-0x240000-0x7c</key>
+				<dict>
+					<key>Action</key>
+					<integer>10</integer>
+					<key>Apply Mode</key>
+					<integer>0</integer>
+					<key>Escaping</key>
+					<integer>2</integer>
+					<key>Text</key>
+					<string>ctrlright</string>
+					<key>Version</key>
+					<integer>2</integer>
 				</dict>
 				<key>0xf703-0x280000</key>
 				<dict>
