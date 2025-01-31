@@ -2,6 +2,7 @@
 export PATH=/opt/homebrew/bin:$PATH
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 export PATH=$PATH:$HOME/go/bin
+export PATH=$PATH:$HOME/.local/bin
 
 # Python
 export PYTHONSTARTUP="$HOME/.pythonstartup"
