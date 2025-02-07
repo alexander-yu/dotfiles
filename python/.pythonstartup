@@ -6,3 +6,10 @@ except ModuleNotFoundError:
     import readline
 
 readline.parse_and_bind("tab: complete")
+
+
+try:
+    from rich import pretty
+    pretty.install()
+except ModuleNotFoundError:
+    pass
