@@ -4,6 +4,8 @@
 <dict>
 	<key>AllowClipboardAccess</key>
 	<false/>
+	<key>AlternateMouseScroll</key>
+	<true/>
 	<key>AutoCommandHistory</key>
 	<false/>
 	<key>AutoComposer</key>
@@ -2407,7 +2409,7 @@
 			<key>Send Code When Idle</key>
 			<false/>
 			<key>Send New Output Alert</key>
-			<true/>
+			<false/>
 			<key>Shortcut</key>
 			<string></string>
 			<key>Show Mark Indicators</key>
@@ -2486,7 +2488,7 @@
 					<key>parameter</key>
 					<string>open \0</string>
 					<key>regex</key>
-					<string>https://github(\..+)?.com/.+/.+/pull/.+</string>
+					<string>^https://github(\..+)?.com/.+/.+/pull/\d+$</string>
 				</dict>
 				<dict>
 					<key>action</key>
