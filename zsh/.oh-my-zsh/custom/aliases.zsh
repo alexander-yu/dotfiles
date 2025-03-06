@@ -5,3 +5,6 @@ alias la='ls -a'
 alias rm='rm -i'
 alias cat=bat
 forgit_checkout_commit=gcoc
+alias gpom='git push origin master'
+alias gpob='git push origin $(git rev-parse --abbrev-ref HEAD)'
+alias gadd='git commit -a --amend --no-edit'
