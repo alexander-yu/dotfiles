@@ -8,7 +8,7 @@
             brew bundle
 
             # Install watchman hook
-            curl https://raw.githubusercontent.com/git/git/master/templates/hooks--fsmonitor-watchman.sample -o /usr/local/bin/fsmonitor-watchman
+            curl https://raw.githubusercontent.com/git/git/refs/heads/master/templates/hooks/fsmonitor-watchman.sample -o /usr/local/bin/fsmonitor-watchman
             chmod +x /usr/local/bin/fsmonitor-watchman
         ;;
         Linux)
@@ -16,7 +16,7 @@
 
             # Install watchman hook
             mkdir -p "$dir/bin"
-            curl https://raw.githubusercontent.com/git/git/master/templates/hooks--fsmonitor-watchman.sample -o "$dir/bin/fsmonitor-watchman"
+            curl https://raw.githubusercontent.com/git/git/refs/heads/master/templates/hooks/fsmonitor-watchman.sample -o "$dir/bin/fsmonitor-watchman"
             chmod +x "$dir/bin/fsmonitor-watchman"
 
             # Replace shebang with "#!/usr/bin/env perl" so we can use nix's perl installation
