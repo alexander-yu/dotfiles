@@ -1,7 +1,7 @@
 [core]
 	editor = micro
 	pager = diff-so-fancy | less --tabs=4 -RFX
-	fsmonitor = fsmonitor-watchman
+	# fsmonitor = fsmonitor-watchman
 [pager]
 	branch = false
 [interactive]

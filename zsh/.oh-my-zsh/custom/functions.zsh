@@ -25,7 +25,7 @@ conj () {
 }
 
 refresh () {
-    exec zsh
+    omz reload
 }
 
 uuid () {
