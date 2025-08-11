@@ -124,3 +124,8 @@ export NVM_DIR="$HOME/.nvm"
 export FPATH="$HOME/completions":$FPATH
 
 source ~/.iterm2_shell_integration.zsh
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/ayu/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions
