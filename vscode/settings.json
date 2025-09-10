@@ -1,48 +1,80 @@
 {
-    "gitlens.advanced.messages": {
-        "suppressShowKeyBindingsNotice": true
-    },
-    "workbench.colorTheme": "Material Theme Darker",
-    "files.trimTrailingWhitespace": true,
-    "python.testing.unittestEnabled": true,
-    "go.toolsGopath": "~/go",
-    "breadcrumbs.enabled": true,
-    "javascript.validate.enable": false,
-    "explorer.confirmDelete": false,
-    "files.associations": {
-        "*.avsc": "json",
-        "*.aurora": "python"
-    },
-    "workbench.fontAliasing": "auto",
-    "explorer.confirmDragAndDrop": false,
-    "go.testFlags": [
-        "-v",
-        "-race"
-    ],
-    "python.pythonPath": "/usr/local/bin/python",
-    "go.autocompleteUnimportedPackages": true,
-    "python.analysis.logLevel": "Trace",
-    "files.exclude": {
-        "**/*.pyc": true
-    },
-    "python.linting.ignorePatterns": [
-        ".vscode/*.py",
-        "**/site-packages/**/*.py"
-    ],
-    "search.usePCRE2": true,
-    "python.linting.pylintEnabled": true,
-    "python.workspaceSymbols.exclusionPatterns": [
-        "**/site-packages/**"
-    ],
-    "go.gotoSymbol.includeGoroot": true,
-    "python.testing.autoTestDiscoverOnSaveEnabled": false,
-    "eslint.nodePath": null,
-    "extensions.ignoreRecommendations": false,
-    "workbench.startupEditor": "welcomePage",
-    "go.testTimeout": "120s",
-    "files.trimFinalNewlines": true,
-    "autoDocstring.docstringFormat": "sphinx",
-    "editor.suggestSelection": "first",
-    "window.zoomLevel": 0,
-    "workbench.iconTheme": "vscode-icons",
+  "[javascript]": {
+    "editor.tabSize": 2
+  },
+  "[javascriptreact]": {
+    "editor.tabSize": 2
+  },
+  "autoDocstring.docstringFormat": "sphinx-notypes",
+  "breadcrumbs.enabled": true,
+  "editor.accessibilitySupport": "off",
+  "editor.copyWithSyntaxHighlighting": false,
+  "editor.guides.bracketPairs": "active",
+  "editor.stickyScroll.enabled": true,
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "files.associations": {
+    "run": "python"
+  },
+  "files.exclude": {
+    "**/*.pyc": true
+  },
+  "files.trimFinalNewlines": true,
+  "git.mergeEditor": true,
+  "go.testFlags": ["-v", "-race"],
+  "go.testTimeout": "120s",
+  "go.toolsManagement.autoUpdate": true,
+  "jsonnet.languageServer.logLevel": "warn",
+  "python.analysis.logLevel": "Trace",
+  "python.analysis.stubPath": "${env:HOME}/data/protobuf/typeshed",
+  "python.analysis.typeshedPaths": ["${env:HOME}/typeshed"],
+  "python.languageServer": "Pylance",
+  "python.testing.pytestEnabled": true,
+  "redhat.telemetry.enabled": false,
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "terminal.integrated.fontFamily": "'MesloLGS NF'",
+  "workbench.colorCustomizations": {
+    "[Material Theme*]": {}
+  },
+  "workbench.iconTheme": "vscode-icons",
+  "[python]": {
+    "editor.formatOnType": true,
+    "editor.defaultFormatter": "charliermarsh.ruff"
+  },
+  "editor.inlineSuggest.enabled": true,
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": true,
+    "scminput": false
+  },
+  "window.commandCenter": false,
+  "workbench.editor.empty.hint": "hidden",
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "remote.autoForwardPortsSource": "hybrid",
+  "search.followSymlinks": false,
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "gitlens.remotes": [
+    {
+      "domain": "github.hioscar.com",
+      "type": "GitHub"
+    }
+  ],
+  "vscode-pets.theme": "forest",
+  "workbench.colorTheme": "Material Theme Darker",
+  "vscode-pets.petSize": "medium",
+  "html.autoClosingTags": false,
+  "docker.extension.enableComposeLanguageServer": false,
+  "files.trimTrailingWhitespace": true,
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "terminal.integrated.profiles.linux": {
+      "zsh": {
+          "path": "zsh",
+          "args": ["--login"]
+      }
+  }
 }
