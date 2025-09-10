@@ -31,6 +31,7 @@
 
     # Symlink powerlevel10k config
     ln -s "$dir/.p10k.zsh" "$HOME/.p10k.zsh"
+    p10k configure
 
     # Symlink iterm shell integration
     ln -s "$dir/.iterm2_shell_integration.zsh" "$HOME/.iterm2_shell_integration.zsh"
