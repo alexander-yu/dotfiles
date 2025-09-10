@@ -24,7 +24,7 @@
     curl -L git.io/antigen > "$dir/.oh-my-zsh/custom/antigen.zsh"
 
     # Symlink .zshrc
-    ln -s "$dir/.zshrc" "$HOME/.zshrc"
+    ln -sf "$dir/.zshrc" "$HOME/.zshrc"
 
     # Symlink oh-my-zsh custom files
     ln -s "$dir"/.oh-my-zsh/custom/* "$ZSH/custom"
@@ -32,9 +32,6 @@
     # Symlink powerlevel10k config
     ln -s "$dir/.p10k.zsh" "$HOME/.p10k.zsh"
 
-    # Install ripgrep completions
-    wget -P $ZSH/cache/completions https://raw.githubusercontent.com/BurntSushi/ripgrep/master/complete/_rg
-
     # Symlink iterm shell integration
-    ln -s "$dir/.iterm2_shell_integration" "$HOME/.iterm2_shell_integration"
+    ln -s "$dir/.iterm2_shell_integration.zsh" "$HOME/.iterm2_shell_integration.zsh"
 )
