@@ -1,5 +1,5 @@
 (
     set -eo pipefail
 
-    xargs code --install-extension < extensions.txt
+    cat extensions.txt | xargs -L 1 code --install-extension
 )
