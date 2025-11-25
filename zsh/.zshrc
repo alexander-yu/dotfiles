@@ -129,3 +129,7 @@ fpath=(/Users/ayu/.docker/completions $fpath)
 autoload -Uz compinit
 compinit
 # End of Docker CLI completions
+
+if [ -e /home/ayu/.nix-profile/etc/profile.d/nix.sh ]; then . /home/ayu/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+
+eval "$(zoxide init zsh)"
