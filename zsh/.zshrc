@@ -130,6 +130,7 @@ autoload -Uz compinit
 compinit
 # End of Docker CLI completions
 
-if [ -e /home/ayu/.nix-profile/etc/profile.d/nix.sh ]; then . /home/ayu/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+if [ -e $HOME/.nix-profile/etc/profile.d/nix.sh ]; then . $HOME/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
 
 eval "$(zoxide init zsh)"
+if [[ -f $HOME/.zshrc.user ]]; then . $HOME/.zshrc.user; fi
