@@ -11,4 +11,4 @@ Do not make assumptions. If any information is missing or there are multiple rea
 
 ## Papercuts
 
-When you encounter a minor friction when working — a tool call that failed and had to be retried, confusing documentation, undocumented setup steps, flaky commands, stale cache, misleading errors, or any other non-obvious gotcha — add an entry to `~/prompts/papercuts.md` following the designated format. Describe what you were doing and what got in the way. If relevant, include the solution or fix.
+When you encounter a minor friction when working — a tool call that failed and had to be retried, confusing documentation, undocumented setup steps, flaky commands, stale cache, misleading errors, or any other non-obvious gotcha — first look at `~/prompts/papercuts.md` to see if it was previously recorded and if there is a warning/fix already in place. If not, add an entry to it, following the designated format. Describe what you were doing and what got in the way. If relevant, include the solution or fix.
