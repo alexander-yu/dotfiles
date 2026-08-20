@@ -1,5 +1,8 @@
 # CLAUDE.md
 
+## Output Style + Coding Conventions
+I really value readability and parsimony in code, prompts and documentation. Try to DRY out your outputs.
+
 ## Finding/Searching Files
 Prefer using rg (ripgrep) when available, otherwise default to grep, and only if neither of those are suitable, use find or find -exec.
 
