@@ -19,3 +19,10 @@ Do not make assumptions. If any information is missing or there are multiple rea
 
 ## Papercuts
 When you encounter a minor friction when working — a tool call that failed and had to be retried, confusing documentation, undocumented setup steps, flaky commands, stale cache, misleading errors, or any other non-obvious gotcha — first look at `~/prompts/papercuts.md` to see if it was previously recorded and if there is a warning/fix already in place. If not, add an entry to it, following the designated format. Describe what you were doing and what got in the way. If relevant, include the solution or fix.
+
+## Git handoff
+
+<!-- Recorded by Codex, an AI coding assistant, from the user's explicit preference. -->
+Create new branches from current master unless the user explicitly requests a different base or a stacked branch.
+
+After completing work in a temporary worktree, commit the changes locally, check out that branch in the main checkout, and remove the temporary worktree. Preserve the previous branch and any unrelated work. Do not push commits or open pull requests unless the user explicitly requests it.
