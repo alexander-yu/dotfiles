@@ -61,7 +61,7 @@
     },
   ],
   "vscode-pets.theme": "forest",
-  "workbench.colorTheme": "One Dark Pro Darker",
+  "workbench.colorTheme": "Kanagawa Wave",
   "vscode-pets.petSize": "medium",
   "html.autoClosingTags": false,
   "docker.extension.enableComposeLanguageServer": false,
@@ -99,4 +99,12 @@
   "bazel.testExplorer.enable": false,
   "bazel.workspaceTree.enable": false,
   "bazel.codeLens.enable": false,
+  "yaml.disableSchemaDetection": [
+    "**/.github/workflows/*.yml",
+    "**/.github/workflows/*.yaml",
+    "**/.gitea/workflows/*.yml",
+    "**/.gitea/workflows/*.yaml",
+    "**/.forgejo/workflows/*.yml",
+    "**/.forgejo/workflows/*.yaml",
+  ],
 }
