@@ -19,6 +19,7 @@ grapecity.gc-excelviewer
 graphql.vscode-graphql
 graphql.vscode-graphql-execution
 graphql.vscode-graphql-syntax
+metaphore.kanagawa-vscode-color-theme
 ms-azuretools.vscode-containers
 ms-azuretools.vscode-docker
 ms-kubernetes-tools.vscode-kubernetes-tools
