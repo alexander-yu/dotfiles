@@ -11,9 +11,6 @@ docker.docker
 eamodio.gitlens
 esbenp.prettier-vscode
 figma.figma-vscode-extension
-flowtype.flow-for-vscode
-github.copilot
-github.copilot-chat
 github.vscode-github-actions
 github.vscode-pull-request-github
 golang.go
@@ -42,11 +39,9 @@ ms-vscode-remote.vscode-remote-extensionpack
 ms-vscode.powershell
 ms-vscode.remote-explorer
 ms-vscode.remote-server
-njpwerner.autodocstring
 redhat.vscode-yaml
 shd101wyy.markdown-preview-enhanced
 stylelint.vscode-stylelint
-t3dotgg.vsc-material-theme-but-i-wont-sue-you
 tonybaloney.vscode-pets
 vscode-icons-team.vscode-icons
 yzhang.markdown-all-in-one
