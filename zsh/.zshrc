@@ -136,3 +136,7 @@ eval "$(zoxide init zsh)"
 if [[ -f $HOME/.zshrc.user ]]; then . $HOME/.zshrc.user; fi
 
 if [ -e /home/ayu/.nix-profile/etc/profile.d/nix.sh ]; then . /home/ayu/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+
+# >>> Codex installer >>>
+export PATH="/home/ayu/.local/bin:$PATH"
+# <<< Codex installer <<<
