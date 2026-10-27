@@ -37,4 +37,4 @@ After completing work in a temporary worktree, commit the changes locally, check
 
 - Do not prefix branch names with the AI harness name, e.g. codex or claude. You may use slashes to indicate hierarchy.
 - When stacking branches, the naming should have a structure that captures the (project, workstream description, issue number, sequence number, branch description) in that order, e.g. `project/feature-123/1-add-login`.
-- When stacking branches, ensure that each branch clearly indicates its relationship to the previous branch in the stack, maintaining a logical and traceable sequence.
+- When stacking branches, ensure that each branch clearly indicates its relationship to the previous branch in the stack (e.g. via `git branch -u`), maintaining a logical and traceable sequence.
