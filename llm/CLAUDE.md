@@ -4,6 +4,8 @@
 
 I really value readability and parsimony in code, prompts and documentation. Try to DRY out your outputs.
 
+Use whitespace generously to improve readability and group/separate related chunks of statements.
+
 ## Subagents
 
 Avoid extensive `Glob`/`Grep`/`WebSearch`/`Bash` - use `Explore` agents instead.
